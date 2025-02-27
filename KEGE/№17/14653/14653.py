@@ -1,6 +1,6 @@
 from math import sqrt
 
-massive = [int(x[:-1]) for x in open("14653.txt").readline()]
+massive = [int(x[:-1]) for x in open("14653.txt").readlines()]
 
 del_17_list = []
 for element in massive:
