@@ -1,10 +1,10 @@
 from math import sqrt
 
-massive = [int(x[:-1]) for x in open("14653.txt").readlines()]
+massive = [int(x[:-1]) for x in open(r"C:\Users\timof\Documents\Preparation\KEGE\№17\14653\14653.txt").readlines()]
 
 del_17_list = []
 for element in massive:
-    if element % 17 == 0:
+    if element % 17 == 0 and element > 0:
         del_17_list.append(element)
 del_17_list.sort()
 summ_min_elements = del_17_list[0] + del_17_list[1]
@@ -16,7 +16,6 @@ for element in massive:
 max_end_69_sqr = sqrt(max_end_69_sqr)
 
 result_list = []
-print(massive)
 for i in range(len(massive) - 3):
     count_three_len = 0
     count_del_18 = 0
@@ -28,6 +27,6 @@ for i in range(len(massive) - 3):
         if element % 18 == 0:
             count_del_18 += 1
     if count_three_len == 2 and count_del_18 == 1 and sum(massive[i:i + 4]) % summ_min_elements == 0 and pr_elment <= max_end_69_sqr:
-        result_list.append(sqrt(sum(massive[i:i + 4])))
+        result_list.append(sum(massive[i:i + 4]) ** 2)
 
-print(len(result_list), min(result_list))
+print(len(result_list), sum(result_list))
