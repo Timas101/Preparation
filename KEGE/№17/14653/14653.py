@@ -12,10 +12,11 @@ summ_min_elements = del_17_list[0] + del_17_list[1]
 max_end_69_sqr = -10 ** 4
 for element in massive:
     if str(element)[:-2] == '69':
-        max_end_69 = max(max_end_69, element)
-max_end_69_sqr = sqrt(max_end_69)
+        max_end_69_sqr = max(max_end_69_sqr, element)
+max_end_69_sqr = sqrt(max_end_69_sqr)
 
 result_list = []
+print(massive)
 for i in range(len(massive) - 3):
     count_three_len = 0
     count_del_18 = 0
