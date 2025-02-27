@@ -1,5 +1,3 @@
-from math import sqrt
-
 massive = [int(x[:-1]) for x in open(r"C:\Users\timof\Documents\Preparation\KEGE\№17\14653\14653.txt").readlines()]
 
 del_17_list = []
@@ -9,11 +7,11 @@ for element in massive:
 del_17_list.sort()
 summ_min_elements = del_17_list[0] + del_17_list[1]
 
-max_end_69_sqr = -10 ** 4
+max_end_69_sqr = -10 ** 40
 for element in massive:
-    if str(element)[:-2] == '69':
+    if element % 100 == 69:
         max_end_69_sqr = max(max_end_69_sqr, element)
-max_end_69_sqr = sqrt(max_end_69_sqr)
+max_end_69_sqr = max_end_69_sqr ** 2
 
 result_list = []
 for i in range(len(massive) - 3):
@@ -22,7 +20,7 @@ for i in range(len(massive) - 3):
     pr_elment = 1
     for element in massive[i:i + 4]:
         pr_elment *= element
-        if len(str(element)) == 3:
+        if 100 <= abs(element) <= 999:
             count_three_len += 1
         if element % 18 == 0:
             count_del_18 += 1
