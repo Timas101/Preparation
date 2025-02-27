@@ -27,4 +27,4 @@ for i in range(len(massive) - 3):
     if count_three_len == 2 and count_del_18 == 1 and sum(massive[i:i + 4]) % summ_min_elements == 0 and pr_elment <= max_end_69_sqr:
         result_list.append(sum(massive[i:i + 4]) ** 2)
 
-print(len(result_list), sum(result_list))
+print(len(result_list), min(result_list))
