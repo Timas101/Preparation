@@ -20,7 +20,7 @@ for i in range(len(massive) - 3):
     pr_elment = 1
     for element in massive[i:i + 4]:
         pr_elment *= element
-        if 100 <= abs(element) <= 999:
+        if len(str(abs(element))) == 3:
             count_three_len += 1
         if element % 18 == 0:
             count_del_18 += 1
