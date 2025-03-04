@@ -1,4 +1,4 @@
-base_array = [int(x[:-2]) for x in open(r"C:\Users\timof\Documents\Preparation\KEGE\№17\12926\17_12926.txt"]
+base_array = [int(x[:-2]) for x in open(r"C:\Users\timof\Documents\Preparation\KEGE\№17\12926\17_12926.txt")]
 
 max_two_len_num = 0
 for element in base_array:
