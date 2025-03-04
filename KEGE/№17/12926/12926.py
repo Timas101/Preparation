@@ -6,14 +6,8 @@ for element in base_array:
 
 max_sum_four = 0
 for i in range(len(base_array) - 4):
-    sum_array = base_array[i:i + 4]
-    same_end_check = True
-    end_int = abs(sum_array[0]) % 10
-    for element in sum_array:
-        if end_int != abs(element) % 10:
-            same_end_check = False
-    if same_end_check == True:
-        max_sum_four = max(sum(sum_array), max_sum_four)
+    if len(set(map(lambda x: abs(x) % 10, base_array[i:i + 4]))) == 1:
+        max_sum_four = max(max_sum_four, sum(base_array[i:i + 4]))
 print(max_sum_four)
 
 count_five = 0
@@ -28,8 +22,3 @@ for i in range(len(base_array) - 5):
         sum_five_array.append(sum(check_array))
         count_five += 1
 print(count_five, min(sum_five_array))
-
-
-        
-
-
