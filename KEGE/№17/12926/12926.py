@@ -4,7 +4,7 @@ for element in base_array:
     if len(str(abs(element))) == 2:
         max_two_len_num = max(max_two_len_num, element)
 
-max_sum_four = 0
+max_sum_four = -10**7
 for i in range(len(base_array) - 4):
     if len(set(map(lambda x: abs(x) % 10, base_array[i:i + 4]))) == 1:
         max_sum_four = max(max_sum_four, sum(base_array[i:i + 4]))
