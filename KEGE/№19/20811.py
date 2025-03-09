@@ -1,5 +1,5 @@
 def Check(num, count):
-    if count > 3 and num >= 51:
+    if count > 3 or num >= 51:
         return count == 3
     if count % 2 == 0:
         return Check(num + 1, count + 1) or Check(num + 4, count + 1) or Check(num * 2, count + 1)
