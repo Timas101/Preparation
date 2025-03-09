@@ -7,7 +7,6 @@ def Check(num, count):
         return Check(num + 1, count + 1) and Check(num + 4, count + 1) and Check(num * 2, count + 1)
     
 
-
-for num in range(1, 51):
-    if Check(num, 1):
-        print(num)
+for s in range(1, 51):
+    if Check(s, 1):
+        print(s)
